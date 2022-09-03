@@ -11,12 +11,14 @@
     <div>
         <h1>To-Do List</h1>
     </div>
-    <div class="form">
-        <label for="text-box">Add to list:</label>
-        <input class="text-box" name="text-box" form="text">
-        <button class="button">Add</button>
+    <form class="form-container">
+        <label for="todo-text-box">Add to list:</label>
+        <input class="todo-text-box" name="todo-text-box" id="todo-text-box" form="text">
+        <button class="button">Add to List</button>
+    </form>
+    <div class="list-container">
+        <ul class="list"></ul>
     </div>
-    <div class="list"></div>
     <script src="app.js"></script>
 </body>
 </html>
