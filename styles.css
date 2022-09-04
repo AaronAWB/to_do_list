@@ -19,3 +19,7 @@
 .to-do-item {
     list-style: none;
 }
+
+.completed {
+    text-decoration: line-through;
+}

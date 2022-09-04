@@ -21,10 +21,11 @@ function createListItem () {
     newToDo.classList.add('to-do-content');
     toDoDiv.appendChild(newToDo);
 
-    const completeButton = document.createElement('input');
-    completeButton.type = "checkbox";
-    completeButton.classList.add('complete-button');
-    toDoDiv.appendChild(completeButton);
+    const completeCheckbox = document.createElement('input');
+    completeCheckbox.type = "checkbox";
+    completeCheckbox.classList.add('complete-button');
+    completeCheckbox.addEventListener('change', completeToDo);
+    toDoDiv.appendChild(completeCheckbox);
 
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
@@ -36,10 +37,13 @@ function createListItem () {
 }
 
 function deleteToDo (event) {
+
     const deletedItem = event.target.parentElement;
     deletedItem.remove();
 }
 
 function completeToDo (event) {
 
+    const completedItem = event.target.parentElement;
+    completedItem.classList.toggle("completed");
 }
