@@ -39,7 +39,9 @@ function createListItem () {
 function deleteToDo (event) {
 
     const deletedItem = event.target.parentElement;
-    deletedItem.remove();
+    if (deletedItem.classList[1] === "completed") {
+        deletedItem.remove();
+    }
 }
 
 function completeToDo (event) {
