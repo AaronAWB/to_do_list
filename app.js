@@ -8,6 +8,7 @@ function addToDo (event) {
 
     event.preventDefault();
     createListItem();
+    toDoInput.value = "";
 }
 
 function createListItem () {
@@ -20,14 +21,25 @@ function createListItem () {
     newToDo.classList.add('to-do-content');
     toDoDiv.appendChild(newToDo);
 
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-button');
-    deleteButton.innerHTML = '<i class="fa fa-trash-o"></i>'
-    toDoDiv.appendChild(deleteButton);
-
-    const completeButton = document.createElement('button');
+    const completeButton = document.createElement('input');
+    completeButton.type = "checkbox";
     completeButton.classList.add('complete-button');
     toDoDiv.appendChild(completeButton);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-button');
+    deleteButton.innerHTML = '<span>&#10006;</span>';
+    deleteButton.addEventListener('click', deleteToDo);
+    toDoDiv.appendChild(deleteButton);
+
     toDoList.appendChild(toDoDiv);
+}
+
+function deleteToDo (event) {
+    const deletedItem = event.target.parentElement;
+    deletedItem.remove();
+}
+
+function completeToDo (event) {
+
 }
