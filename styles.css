@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(to bottom right, darkgray, darkgreen);
+    background-image: linear-gradient(to bottom right, darkseagreen, darkgreen);
     color: white;
     font-family: sans-serif;
     min-height: 100vh;
@@ -50,6 +50,7 @@ body {
 .to-do-list {
     list-style: none;
 }
+
 .to-do-item {
     margin: 0.5rem;
     background: white;
@@ -83,5 +84,5 @@ span {
 
 .completed li {
     text-decoration: line-through;
-    color: darkseagreen
+    color: darkgrey
 }
