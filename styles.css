@@ -1,25 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, darkgray, darkgreen);
+    color: white;
+    font-family: sans-serif;
+    min-height: 100vh;
+
+}
 .header {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header, .form-container, .list-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 20vh;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.to-do-textbox, .add-button {
+    padding: .5rem;
+    font-size: 2rem
 }
 
-.list-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.to-do-textbox {
+    width: 400px;
+    background: white;
+    border: transparent;
+    box-shadow: none;
+    color: black;
 }
 
-.to-do-item {
+.add-button {
+    background: orange;
+    width: 100px;
+    color: white;
+    border: transparent;
+}
+
+.add-button:hover {
+    background: darkorange;
+}
+
+.to-do-list {
     list-style: none;
 }
+.to-do-item {
+    margin: 0.5rem;
+    background: white;
+    width: 400px;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
 
-.completed {
+.to-do-item li {
+    flex: 1;
+    padding: 10px;
+}
+
+.delete-button {
+    background: orange;
+    border: none;
+    padding: 1rem;
+}
+
+.delete-button:hover {
+    background: darkorange;
+}
+
+span {
+    pointer-events: none;
+}
+
+.completed li {
     text-decoration: line-through;
+    color: darkseagreen
 }

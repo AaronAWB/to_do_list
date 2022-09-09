@@ -1,5 +1,5 @@
-const addButton = document.querySelector(".button");
-const toDoInput = document.querySelector(".to-do-text-box");
+const addButton = document.querySelector(".add-button");
+const toDoInput = document.querySelector(".to-do-textbox");
 const toDoList = document.querySelector(".to-do-list");
 
 addButton.addEventListener('click', addToDo);
@@ -21,17 +21,13 @@ function createListItem () {
     newToDo.classList.add('to-do-content');
     toDoDiv.appendChild(newToDo);
 
-    const completeCheckbox = document.createElement('input');
-    completeCheckbox.type = "checkbox";
-    completeCheckbox.classList.add('complete-button');
-    completeCheckbox.addEventListener('change', completeToDo);
-    toDoDiv.appendChild(completeCheckbox);
-
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
     deleteButton.innerHTML = '<span>&#10006;</span>';
     deleteButton.addEventListener('click', deleteToDo);
     toDoDiv.appendChild(deleteButton);
+
+    newToDo.addEventListener ('click', completeToDo);
 
     toDoList.appendChild(toDoDiv);
 }
