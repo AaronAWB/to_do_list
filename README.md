@@ -1,6 +1,6 @@
 # To Do List
 
-Launch <a href="https://aaronawb.github.io/to_do_list/">here</a>
+Launch <a href="https://aaronawb.github.io/to_do_list/">here</a>.
 
 <img width="1657" alt="Screen Shot 2022-09-09 at 7 40 29 PM" src="https://user-images.githubusercontent.com/108595340/189465794-75d1a5ee-4034-4a8b-832b-0ab6056afe45.png">
 
