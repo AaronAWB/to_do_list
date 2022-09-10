@@ -8,6 +8,8 @@ Launch <a href="https://aaronawb.github.io/to_do_list/">here</a>.
 
 This is a simple to do list app made using only JavaScript, CSS, and HTML. The user can enter a new task, which will be added to the list below. Each item on the list can be marked as complete by clicking on its text. Completed items are shown in grey strikethrough text. Completed items can then be deleted by clicking the x button next to the completed item. A list item cannot be deleted until it is marked as complete.
 
+Building this project was a great exercise in flexbox, event listeners, and DOM manipulation.
+
 ## Author
 
 Aaron Brinckerhoff
