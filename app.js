@@ -3,6 +3,12 @@ const toDoInput = document.querySelector(".to-do-textbox");
 const toDoList = document.querySelector(".to-do-list");
 
 addButton.addEventListener('click', addToDo);
+toDoInput.addEventListener('keypress', function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        addButton.click();
+    }
+})
 
 function addToDo (event) {
 
